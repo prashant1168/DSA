@@ -1,0 +1,33 @@
+public class Subsequence {
+public void checksubStr1(String string, String substring) {
+        int p1 = 0;
+        int p2 = 0;
+        while (p1 < string.length() && p2 < substring.length()) {
+            if (string.charAt(p1) == substring.charAt(p2)) {
+                p2++;
+            }
+            p1++;
+        }
+        if (substring.length() == p2)
+
+        {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+
+    }
+
+    public void printArray(char arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+        }
+
+    }
+
+    public static void main(String[] args) {
+        Subsequence s = new Subsequence();
+        s.checksubStr1("abcdef", "cef");
+
+    }
+}
